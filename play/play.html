@@ -1,0 +1,175 @@
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <%include('meta')%>
+
+    <title><%=vn%></title>
+
+</head>
+<body>
+    <!-- 头部 开始 -->
+    <header class="header-index">
+        <section class="mod-header bd-pd clearfix">
+            <h1 class="topLogo">
+                <a href="/index.html#stat_logo" data-delegate="go" data-page-tmplid="index" class="logo">爱奇艺</a>
+            </h1>
+            <div class="topMenu">
+                <a href="/search.html#stat_search" data-header-btnelem="search" data-delegate="go" data-page-tmplid="search" class="dib"><i class="iconButton-1x iconButton-2x iconButton_search"></i></a>
+<a href="/billboard.html" data-header-btnelem="billboard" data-delegate="go" data-page-tmplid="search" class="dib"><i class="iconButton-1x iconButton-2x iconButton_rank"></i></a>
+<a href="/user.html" data-header-btnelem="user" data-delegate="go" data-page-tmplid="user" class="dib"><i class="iconButton-1x iconButton-2x iconButton_personal"></i></a>
+<a href="/record.html" data-header-btnelem="record" data-delegate="go" data-page-tmplid="user" class="dib pr"><i class="iconButton-1x iconButton-2x iconButton_playRec"></i><i class="updateTip dn"></i></a>
+
+            </div>
+        </section>
+        <!--频道标签-->
+        <nav class="mod-mainNav">
+            <div class="header_opt header_opt-title">
+                <div class="header_opt_left"><a class="iconButton-1x iconButton-2x iconButton_goBack" href="javascript:history.back()"></a></div>
+
+                <div class="header_opt_center fs14 textOverflow" data-widget-pageinfo="navbar"><%=vn%></div>
+                <div class="header_opt_right"><a style="visibility:hidden;" class="iconButton-1x iconButton-2x iconButton_share" href="#"></a></div>
+            </div>
+        </nav>
+        <!--频道标签end-->
+    </header>
+    <!-- 头部 结束 -->
+    <!-- 内容 开始 -->
+    <section class="h5_wrap bd-pd">
+        <!-- 频道播放页 开始 -->
+        <div class="mt10 mb10 tc" id="videoWrapper">
+            
+        </div>
+        <!-- 频道播放页 控制区 开始 -->
+        <section class="mod-video_control pb10">
+            <div data-widget-player="progressBar" style="position:relative;" class="video_controlBar">
+                <div data-widget-player="progress" style="position:absolute;" class="video_proBar">
+                    <a data-widget-player="progressFocus" style="position:absolute;right:-10px;" data-delegate="stat_progress" class="iconButton-1x iconButton-2x iconButton_videoPro" href="javascript:void(0)"></a>
+                </div>
+            </div>
+            <div class="fbJustify mt10">
+                <div data-widget-player="time" class="video_time-now">00:00:00</div>
+                <div data-widget-player="totaltime" class="video_time-total">01:11</div>
+            </div>
+            <div class="fbJustify mt10">
+                <div class="pr">
+                    <a data-widget-player="mtbtn" class="iconButton_videoType" href="javascript:void(0)">标清</a>
+                    <div data-widget-player="mtinfo" style="display:none;" class="video_type-wrap"></div>
+                </div>
+                <div>
+                    <span data-widget-player="prevbtn" data-enable="false" style="visibility: visible;" class="videoBtn_wrap"><a class="iconButton-1x iconButton-2x iconButton_videoPre hide-text iconButton_videoPreNone" href="javascript:void(0);">上一集</a></span>
+                    <span data-widget-player="pausebtn" playsign="pause" class="videoBtn_wrap"><a class="iconButton-1x iconButton-2x iconButton_videoPlay hide-text" href="javascript:void(0);">暂停</a></span>
+                    <span data-widget-player="nextbtn" data-enable="true" style="visibility: visible;" class="videoBtn_wrap"><a class="iconButton-1x iconButton-2x iconButton_videoNext hide-text" href="javascript:void(0);">下一集</a></span>
+                </div>
+                <div>
+                    <a style="visibility:hidden;" class="iconButton-1x iconButton-2x iconButton_share mr20 hide-text" href="#">分享</a>
+                    <a data-widget-player="fullscreenbtn" class="iconButton-1x iconButton-2x iconButton_max hide-text" href="javascript:void(0)" data-private-display="" style="display: none;">最大化</a>
+                </div>
+            </div>
+        </section>
+        <!-- 频道播放页 控制区 结束 -->
+        <!-- 频道播放页 分集信息 开始 -->
+        <section class="mt10">
+            <div data-widget-pageinfo="con" class="mod-media_playList_info mod-media_playList-intro"><div class="info"><h4 class="textOverflow"><%=vn%></h4></div><ul class="mod-media_info-max"><li><span>总播放：</span><span data-widget-pageinfo="counts">10,778</span></li><li><span class="cutLine" data-widget-pageinfo="label">
+            <%=tg.replace(/ /g,' | ')%>
+        </span></li></ul><div class="pa"><a style="visibility:hidden;" class="btn-offline btn-small mr5" href="javascript:void(0)">稍后播放</a><a data-widget-down="link" data-down-ios="iqiyi" data-down-android="iqiyi_playpage" class="btn-offline btn-small" href="http://ota.iqiyi.com/t.jsp?cid=579">下载观看</a></div></div>
+            <div class="mt15">
+                <ul class="mod-tablist fbLeft">
+                    <li class="" data-widget-tab-label="album" style="display:none;"><a href="javascript:void(0)" title="剧集">剧集</a></li>
+                    <li data-widget-tab-label="albuminfo" style="display:none;"><a href="javascript:void(0)" title="分集剧情">分集剧情</a></li>
+                    <li data-widget-tab-label="qiyu" style="display: block;" class="selected first"><a href="javascript:void(0)" title="相关推荐">相关推荐</a></li>
+                    <li data-widget-tab-label="qitan" style="display: block;" class="last"><a href="javascript:void(0)" title="奇谈热议">奇谈热议</a></li>
+                </ul>
+                <div data-widget-tab-body="album" style="display: none;" class="mt10">
+                    <ul class="mod-videolist" data-widget-albumlist="con"></ul>
+                    <!-- 剧情简介 相关推荐 开始 -->
+                    <div class="mt15 mb15" style="display:none;">
+                        <h3 class="mb15 fn">相关推荐</h3>
+                        <ul class="picList_90-118 indexHeight-118 picList_90-118-play" data-widget-recommend-other=""></ul>
+                    </div>
+                    <!-- 剧情简介 相关推荐 结束 -->
+                </div>
+                <div data-widget-tab-body="albuminfo" style="display: none;" class="mt10">分集剧情</div>
+                <div data-widget-tab-body="qiyu" style="display: block;" class="mt10">
+                    <ul class="picList_90-118-flow picList_90-118-play" data-widget-recommend="" data-albumid="201124500" data-categoryid="25" data-page="play" data-dispnum="19"><li class="selected" tvid="201124500"><div><a class="picList_pic" href="/play.html?tvid=201124500&amp;vid=0b406602550cbf18fdf07ac3f46a6f40" data-delegate="play" data-tvid="201124500" data-vid="0b406602550cbf18fdf07ac3f46a6f40" data-page-tmplid="play" data-albumid="201124500" data-pingback="qiyu"><img width="90" height="120" data-lazy="http://pic5.qiyipic.com/image/20130828/v_100086967_m_601_120_160.jpg" data-lazy="http://pic5.qiyipic.com/image/20130828/v_100086967_m_601_120_160.jpg"><p class="picList_info picList_info-center">正在播放..</p></a><p class="picList_title"><a class="picList_title_main textOverflow" href="/play.html?tvid=201124500&amp;vid=0b406602550cbf18fdf07ac3f46a6f40" data-delegate="go" data-page-tmplid="play" data-albumid="201124500">女护士写诗泄婚外情：一井枯池注水而润</a><a class="picList_title_sub textOverflow" href="/play.html?tvid=201124500&amp;vid=0b406602550cbf18fdf07ac3f46a6f40" data-delegate="go" data-page-tmplid="play" data-albumid="201124500">20130801</a></p></div></li>
+<li class="" tvid="200317400"><div><a class="picList_pic" href="/play.html?tvid=200317400&amp;vid=0ccbbdf5186c3d5802affe37c3c770a7" data-delegate="play" data-tvid="200317400" data-vid="0ccbbdf5186c3d5802affe37c3c770a7" data-page-tmplid="play" data-albumid="" data-pingback="qiyu"><img width="90" height="120" data-lazy="http://pic5.qiyipic.com/image/20130806/v_100027969_m_601_m1_120_160.jpg" data-lazy="http://pic5.qiyipic.com/image/20130806/v_100027969_m_601_m1_120_160.jpg"><p class="picList_info picList_info-center">正在播放..</p></a><p class="picList_title"><a class="picList_title_main textOverflow" href="/play.html?tvid=200317400&amp;vid=0ccbbdf5186c3d5802affe37c3c770a7" data-delegate="go" data-page-tmplid="play" data-albumid="">记者再报告 20</a><a class="picList_title_sub textOverflow" href="/play.html?tvid=200317400&amp;vid=0ccbbdf5186c3d5802affe37c3c770a7" data-delegate="go" data-page-tmplid="play" data-albumid=""></a></p></div></li>
+<li class="" tvid="201099600"><div><a class="picList_pic" href="/play.html?tvid=201099600&amp;vid=b17ddc2e1f0f3bfdbb5c8324b92d2eae" data-delegate="play" data-tvid="201099600" data-vid="b17ddc2e1f0f3bfdbb5c8324b92d2eae" data-page-tmplid="play" data-albumid="" data-pingback="qiyu"><img width="90" height="120" data-lazy="http://pic5.qiyipic.com/image/20130827/v_100084686_m_601_120_160.jpg" data-lazy="http://pic5.qiyipic.com/image/20130827/v_100084686_m_601_120_160.jpg"><p class="picList_info picList_info-center">正在播放..</p></a><p class="picList_title"><a class="picList_title_main textOverflow" href="/play.html?tvid=201099600&amp;vid=b17ddc2e1f0f3bfdbb5c8324b92d2eae" data-delegate="go" data-page-tmplid="play" data-albumid="">实拍加拿大女主持</a><a class="picList_title_sub textOverflow" href="/play.html?tvid=201099600&amp;vid=b17ddc2e1f0f3bfdbb5c8324b92d2eae" data-delegate="go" data-page-tmplid="play" data-albumid=""></a></p></div></li>
+<li class="" tvid="200613500"><div><a class="picList_pic" href="/play.html?tvid=200613500&amp;vid=6b6f5be20fbd48f628260d070e618cc7" data-delegate="play" data-tvid="200613500" data-vid="6b6f5be20fbd48f628260d070e618cc7" data-page-tmplid="play" data-albumid="" data-pingback="qiyu"><img width="90" height="120" data-lazy="http://pic5.qiyipic.com/image/20130815/v_100049886_m_601_120_160.jpg" data-lazy="http://pic5.qiyipic.com/image/20130815/v_100049886_m_601_120_160.jpg"><p class="picList_info picList_info-center">正在播放..</p></a><p class="picList_title"><a class="picList_title_main textOverflow" href="/play.html?tvid=200613500&amp;vid=6b6f5be20fbd48f628260d070e618cc7" data-delegate="go" data-page-tmplid="play" data-albumid="">传少林寺方丈释永</a><a class="picList_title_sub textOverflow" href="/play.html?tvid=200613500&amp;vid=6b6f5be20fbd48f628260d070e618cc7" data-delegate="go" data-page-tmplid="play" data-albumid=""></a></p></div></li>
+<li class="" tvid="200537400"><div><a class="picList_pic" href="/play.html?tvid=200537400&amp;vid=55850bcbd2bd064e463bd26b5d7c8548" data-delegate="play" data-tvid="200537400" data-vid="55850bcbd2bd064e463bd26b5d7c8548" data-page-tmplid="play" data-albumid="" data-pingback="qiyu"><img width="90" height="120" data-lazy="http://pic5.qiyipic.com/image/20130812/v_100044102_m_601_120_160.jpg" data-lazy="http://pic5.qiyipic.com/image/20130812/v_100044102_m_601_120_160.jpg"><p class="picList_info picList_info-center">正在播放..</p></a><p class="picList_title"><a class="picList_title_main textOverflow" href="/play.html?tvid=200537400&amp;vid=55850bcbd2bd064e463bd26b5d7c8548" data-delegate="go" data-page-tmplid="play" data-albumid="">疑似某地村民观看</a><a class="picList_title_sub textOverflow" href="/play.html?tvid=200537400&amp;vid=55850bcbd2bd064e463bd26b5d7c8548" data-delegate="go" data-page-tmplid="play" data-albumid=""></a></p></div></li>
+<li class="" tvid="201076500"><div><a class="picList_pic" href="/play.html?tvid=201076500&amp;vid=3a174b2b8fef41ecb81c1f165f92abbd" data-delegate="play" data-tvid="201076500" data-vid="3a174b2b8fef41ecb81c1f165f92abbd" data-page-tmplid="play" data-albumid="" data-pingback="qiyu"><img width="90" height="120" data-lazy="http://pic5.qiyipic.com/image/20130827/v_100082836_m_601_m4_120_160.jpg" data-lazy="http://pic5.qiyipic.com/image/20130827/v_100082836_m_601_m4_120_160.jpg"><p class="picList_info picList_info-center">正在播放..</p></a><p class="picList_title"><a class="picList_title_main textOverflow" href="/play.html?tvid=201076500&amp;vid=3a174b2b8fef41ecb81c1f165f92abbd" data-delegate="go" data-page-tmplid="play" data-albumid="">村民挖出清代不腐</a><a class="picList_title_sub textOverflow" href="/play.html?tvid=201076500&amp;vid=3a174b2b8fef41ecb81c1f165f92abbd" data-delegate="go" data-page-tmplid="play" data-albumid=""></a></p></div></li>
+<li class="" tvid="200745900"><div><a class="picList_pic" href="/play.html?tvid=200745900&amp;vid=92973ba247fa6fa1c5a54ea0622619a5" data-delegate="play" data-tvid="200745900" data-vid="92973ba247fa6fa1c5a54ea0622619a5" data-page-tmplid="play" data-albumid="" data-pingback="qiyu"><img width="90" height="120" data-lazy="http://pic5.qiyipic.com/image/20130818/v_100059742_m_601_120_160.jpg" data-lazy="http://pic5.qiyipic.com/image/20130818/v_100059742_m_601_120_160.jpg"><p class="picList_info picList_info-center">正在播放..</p></a><p class="picList_title"><a class="picList_title_main textOverflow" href="/play.html?tvid=200745900&amp;vid=92973ba247fa6fa1c5a54ea0622619a5" data-delegate="go" data-page-tmplid="play" data-albumid="">实拍女子洗浴中心</a><a class="picList_title_sub textOverflow" href="/play.html?tvid=200745900&amp;vid=92973ba247fa6fa1c5a54ea0622619a5" data-delegate="go" data-page-tmplid="play" data-albumid=""></a></p></div></li>
+<li class="" tvid="200575100"><div><a class="picList_pic" href="/play.html?tvid=200575100&amp;vid=a9c3477be9afb8067cd31edef633aa3b" data-delegate="play" data-tvid="200575100" data-vid="a9c3477be9afb8067cd31edef633aa3b" data-page-tmplid="play" data-albumid="" data-pingback="qiyu"><img width="90" height="120" data-lazy="http://pic5.qiyipic.com/image/20130814/v_100046994_m_601_120_160.jpg" data-lazy="http://pic5.qiyipic.com/image/20130814/v_100046994_m_601_120_160.jpg"><p class="picList_info picList_info-center">正在播放..</p></a><p class="picList_title"><a class="picList_title_main textOverflow" href="/play.html?tvid=200575100&amp;vid=a9c3477be9afb8067cd31edef633aa3b" data-delegate="go" data-page-tmplid="play" data-albumid="">男子酒店当警察面</a><a class="picList_title_sub textOverflow" href="/play.html?tvid=200575100&amp;vid=a9c3477be9afb8067cd31edef633aa3b" data-delegate="go" data-page-tmplid="play" data-albumid=""></a></p></div></li>
+<li class="" tvid="201094700"><div><a class="picList_pic" href="/play.html?tvid=201094700&amp;vid=f8f509762a726ef2bcd9502cea92c0aa" data-delegate="play" data-tvid="201094700" data-vid="f8f509762a726ef2bcd9502cea92c0aa" data-page-tmplid="play" data-albumid="" data-pingback="qiyu"><img width="90" height="120" data-lazy="http://pic5.qiyipic.com/image/20130827/v_100084301_m_601_120_160.jpg" data-lazy="http://pic5.qiyipic.com/image/20130827/v_100084301_m_601_120_160.jpg"><p class="picList_info picList_info-center">正在播放..</p></a><p class="picList_title"><a class="picList_title_main textOverflow" href="/play.html?tvid=201094700&amp;vid=f8f509762a726ef2bcd9502cea92c0aa" data-delegate="go" data-page-tmplid="play" data-albumid="">女主持脱掉上衣裸</a><a class="picList_title_sub textOverflow" href="/play.html?tvid=201094700&amp;vid=f8f509762a726ef2bcd9502cea92c0aa" data-delegate="go" data-page-tmplid="play" data-albumid=""></a></p></div></li>
+<li class="" tvid="200612700"><div><a class="picList_pic" href="/play.html?tvid=200612700&amp;vid=b37ef713964e3bf43ea069f917494be9" data-delegate="play" data-tvid="200612700" data-vid="b37ef713964e3bf43ea069f917494be9" data-page-tmplid="play" data-albumid="" data-pingback="qiyu"><img width="90" height="120" data-lazy="http://pic5.qiyipic.com/image/20130815/v_100049859_m_601_120_160.jpg" data-lazy="http://pic5.qiyipic.com/image/20130815/v_100049859_m_601_120_160.jpg"><p class="picList_info picList_info-center">正在播放..</p></a><p class="picList_title"><a class="picList_title_main textOverflow" href="/play.html?tvid=200612700&amp;vid=b37ef713964e3bf43ea069f917494be9" data-delegate="go" data-page-tmplid="play" data-albumid="">广州：“法师”驱</a><a class="picList_title_sub textOverflow" href="/play.html?tvid=200612700&amp;vid=b37ef713964e3bf43ea069f917494be9" data-delegate="go" data-page-tmplid="play" data-albumid=""></a></p></div></li>
+<li class="" tvid="200989400"><div><a class="picList_pic" href="/play.html?tvid=200989400&amp;vid=64b6752c0a84e1b4fcfe77d22414fb50" data-delegate="play" data-tvid="200989400" data-vid="64b6752c0a84e1b4fcfe77d22414fb50" data-page-tmplid="play" data-albumid="" data-pingback="qiyu"><img width="90" height="120" data-lazy="http://pic5.qiyipic.com/image/20130824/v_100076134_m_601_120_160.jpg" data-lazy="http://pic5.qiyipic.com/image/20130824/v_100076134_m_601_120_160.jpg"><p class="picList_info picList_info-center">正在播放..</p></a><p class="picList_title"><a class="picList_title_main textOverflow" href="/play.html?tvid=200989400&amp;vid=64b6752c0a84e1b4fcfe77d22414fb50" data-delegate="go" data-page-tmplid="play" data-albumid="">城管正常执法 却</a><a class="picList_title_sub textOverflow" href="/play.html?tvid=200989400&amp;vid=64b6752c0a84e1b4fcfe77d22414fb50" data-delegate="go" data-page-tmplid="play" data-albumid=""></a></p></div></li>
+<li class="" tvid="200780900"><div><a class="picList_pic" href="/play.html?tvid=200780900&amp;vid=d3637bc8f6c4d1433700baa60eff998c" data-delegate="play" data-tvid="200780900" data-vid="d3637bc8f6c4d1433700baa60eff998c" data-page-tmplid="play" data-albumid="" data-pingback="qiyu"><img width="90" height="120" data-lazy="http://pic5.qiyipic.com/image/20130819/v_100062286_m_601_120_160.jpg" data-lazy="http://pic5.qiyipic.com/image/20130819/v_100062286_m_601_120_160.jpg"><p class="picList_info picList_info-center">正在播放..</p></a><p class="picList_title"><a class="picList_title_main textOverflow" href="/play.html?tvid=200780900&amp;vid=d3637bc8f6c4d1433700baa60eff998c" data-delegate="go" data-page-tmplid="play" data-albumid="">6岁超萌小正太遭</a><a class="picList_title_sub textOverflow" href="/play.html?tvid=200780900&amp;vid=d3637bc8f6c4d1433700baa60eff998c" data-delegate="go" data-page-tmplid="play" data-albumid=""></a></p></div></li>
+<li class="" tvid="201077800"><div><a class="picList_pic" href="/play.html?tvid=201077800&amp;vid=bf61886d838ebcefd000abfeab4957f5" data-delegate="play" data-tvid="201077800" data-vid="bf61886d838ebcefd000abfeab4957f5" data-page-tmplid="play" data-albumid="" data-pingback="qiyu"><img width="90" height="120" data-lazy="http://pic5.qiyipic.com/image/20130827/v_100082923_m_601_120_160.jpg" data-lazy="http://pic5.qiyipic.com/image/20130827/v_100082923_m_601_120_160.jpg"><p class="picList_info picList_info-center">正在播放..</p></a><p class="picList_title"><a class="picList_title_main textOverflow" href="/play.html?tvid=201077800&amp;vid=bf61886d838ebcefd000abfeab4957f5" data-delegate="go" data-page-tmplid="play" data-albumid="">实拍都江堰食客消</a><a class="picList_title_sub textOverflow" href="/play.html?tvid=201077800&amp;vid=bf61886d838ebcefd000abfeab4957f5" data-delegate="go" data-page-tmplid="play" data-albumid=""></a></p></div></li>
+<li class="" tvid="200522900"><div><a class="picList_pic" href="/play.html?tvid=200522900&amp;vid=36cf25965b2df9901bb3c6f4043bfab2" data-delegate="play" data-tvid="200522900" data-vid="36cf25965b2df9901bb3c6f4043bfab2" data-page-tmplid="play" data-albumid="" data-pingback="qiyu"><img width="90" height="120" data-lazy="http://pic5.qiyipic.com/image/20130812/v_100042998_m_601_120_160.jpg" data-lazy="http://pic5.qiyipic.com/image/20130812/v_100042998_m_601_120_160.jpg"><p class="picList_info picList_info-center">正在播放..</p></a><p class="picList_title"><a class="picList_title_main textOverflow" href="/play.html?tvid=200522900&amp;vid=36cf25965b2df9901bb3c6f4043bfab2" data-delegate="go" data-page-tmplid="play" data-albumid="">小情侣餐厅上演激</a><a class="picList_title_sub textOverflow" href="/play.html?tvid=200522900&amp;vid=36cf25965b2df9901bb3c6f4043bfab2" data-delegate="go" data-page-tmplid="play" data-albumid=""></a></p></div></li>
+<li class="" tvid="200465000"><div><a class="picList_pic" href="/play.html?tvid=200465000&amp;vid=e288f4cddff24311a2d0c5af524f71c0" data-delegate="play" data-tvid="200465000" data-vid="e288f4cddff24311a2d0c5af524f71c0" data-page-tmplid="play" data-albumid="" data-pingback="qiyu"><img width="90" height="120" data-lazy="http://pic5.qiyipic.com/image/20130810/v_100039049_m_601_120_160.jpg" data-lazy="http://pic5.qiyipic.com/image/20130810/v_100039049_m_601_120_160.jpg"><p class="picList_info picList_info-center">正在播放..</p></a><p class="picList_title"><a class="picList_title_main textOverflow" href="/play.html?tvid=200465000&amp;vid=e288f4cddff24311a2d0c5af524f71c0" data-delegate="go" data-page-tmplid="play" data-albumid="">孩子哭闹被保姆脚</a><a class="picList_title_sub textOverflow" href="/play.html?tvid=200465000&amp;vid=e288f4cddff24311a2d0c5af524f71c0" data-delegate="go" data-page-tmplid="play" data-albumid=""></a></p></div></li>
+<li class="" tvid="200898400"><div><a class="picList_pic" href="/play.html?tvid=200898400&amp;vid=28eac33ae3f491528d99302f266621d6" data-delegate="play" data-tvid="200898400" data-vid="28eac33ae3f491528d99302f266621d6" data-page-tmplid="play" data-albumid="" data-pingback="qiyu"><img width="90" height="120" data-lazy="http://pic5.qiyipic.com/image/20130822/v_100070423_m_601_120_160.jpg" data-lazy="http://pic5.qiyipic.com/image/20130822/v_100070423_m_601_120_160.jpg"><p class="picList_info picList_info-center">正在播放..</p></a><p class="picList_title"><a class="picList_title_main textOverflow" href="/play.html?tvid=200898400&amp;vid=28eac33ae3f491528d99302f266621d6" data-delegate="go" data-page-tmplid="play" data-albumid="">台湾小情侣不顾旁</a><a class="picList_title_sub textOverflow" href="/play.html?tvid=200898400&amp;vid=28eac33ae3f491528d99302f266621d6" data-delegate="go" data-page-tmplid="play" data-albumid=""></a></p></div></li>
+<li class="" tvid="200540500"><div><a class="picList_pic" href="/play.html?tvid=200540500&amp;vid=01140cc9d5f8559c8cf46c61c714b89b" data-delegate="play" data-tvid="200540500" data-vid="01140cc9d5f8559c8cf46c61c714b89b" data-page-tmplid="play" data-albumid="" data-pingback="qiyu"><img width="90" height="120" data-lazy="http://pic5.qiyipic.com/image/20130813/v_100044328_m_601_120_160.jpg" data-lazy="http://pic5.qiyipic.com/image/20130813/v_100044328_m_601_120_160.jpg"><p class="picList_info picList_info-center">正在播放..</p></a><p class="picList_title"><a class="picList_title_main textOverflow" href="/play.html?tvid=200540500&amp;vid=01140cc9d5f8559c8cf46c61c714b89b" data-delegate="go" data-page-tmplid="play" data-albumid="">宠物狗开车撞死主</a><a class="picList_title_sub textOverflow" href="/play.html?tvid=200540500&amp;vid=01140cc9d5f8559c8cf46c61c714b89b" data-delegate="go" data-page-tmplid="play" data-albumid=""></a></p></div></li>
+<li class="" tvid="200849400"><div><a class="picList_pic" href="/play.html?tvid=200849400&amp;vid=6a28a0b8f381a231e14d6c07e7a25a8c" data-delegate="play" data-tvid="200849400" data-vid="6a28a0b8f381a231e14d6c07e7a25a8c" data-page-tmplid="play" data-albumid="" data-pingback="qiyu"><img width="90" height="120" data-lazy="http://pic5.qiyipic.com/image/20130821/v_100067119_m_601_120_160.jpg" data-lazy="http://pic5.qiyipic.com/image/20130821/v_100067119_m_601_120_160.jpg"><p class="picList_info picList_info-center">正在播放..</p></a><p class="picList_title"><a class="picList_title_main textOverflow" href="/play.html?tvid=200849400&amp;vid=6a28a0b8f381a231e14d6c07e7a25a8c" data-delegate="go" data-page-tmplid="play" data-albumid="">凤姐干露露事件推</a><a class="picList_title_sub textOverflow" href="/play.html?tvid=200849400&amp;vid=6a28a0b8f381a231e14d6c07e7a25a8c" data-delegate="go" data-page-tmplid="play" data-albumid=""></a></p></div></li>
+<li class="" tvid="200991800"><div><a class="picList_pic" href="/play.html?tvid=200991800&amp;vid=c1d088848b7ce30467c07b0f578c3f2f" data-delegate="play" data-tvid="200991800" data-vid="c1d088848b7ce30467c07b0f578c3f2f" data-page-tmplid="play" data-albumid="" data-pingback="qiyu"><img width="90" height="120" data-lazy="http://pic5.qiyipic.com/image/20130824/v_100076403_m_601_120_160.jpg" data-lazy="http://pic5.qiyipic.com/image/20130824/v_100076403_m_601_120_160.jpg"><p class="picList_info picList_info-center">正在播放..</p></a><p class="picList_title"><a class="picList_title_main textOverflow" href="/play.html?tvid=200991800&amp;vid=c1d088848b7ce30467c07b0f578c3f2f" data-delegate="go" data-page-tmplid="play" data-albumid="">“让城管PK拳王</a><a class="picList_title_sub textOverflow" href="/play.html?tvid=200991800&amp;vid=c1d088848b7ce30467c07b0f578c3f2f" data-delegate="go" data-page-tmplid="play" data-albumid=""></a></p></div></li>
+<li class="" tvid="201076400"><div><a class="picList_pic" href="/play.html?tvid=201076400&amp;vid=67e21297d7b100c905d476eed8f032f7" data-delegate="play" data-tvid="201076400" data-vid="67e21297d7b100c905d476eed8f032f7" data-page-tmplid="play" data-albumid="" data-pingback="qiyu"><img width="90" height="120" data-lazy="http://pic5.qiyipic.com/image/20130827/v_100082823_m_601_m1_120_160.jpg" data-lazy="http://pic5.qiyipic.com/image/20130827/v_100082823_m_601_m1_120_160.jpg"><p class="picList_info picList_info-center">正在播放..</p></a><p class="picList_title"><a class="picList_title_main textOverflow" href="/play.html?tvid=201076400&amp;vid=67e21297d7b100c905d476eed8f032f7" data-delegate="go" data-page-tmplid="play" data-albumid="">疑似北京飙车党深</a><a class="picList_title_sub textOverflow" href="/play.html?tvid=201076400&amp;vid=67e21297d7b100c905d476eed8f032f7" data-delegate="go" data-page-tmplid="play" data-albumid=""></a></p></div></li>
+</ul>
+                </div>
+                <div data-widget-tab-body="qitan" style="display: none;" class="mt10">
+                    <div class="mt50 mb50">
+                        <div class="mb15 infoColor">看看片，聊聊天……</div>
+                        <div class="mb15 infoColor">奇谈热议即将上线，敬请期待。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- 频道播放页 分集信息 结束 -->
+        <!-- 频道播放页 结束 -->
+    </section>
+    <!-- 内容 结束 -->
+    <!-- 底部 开始 -->
+    <footer class="h5_footer">
+        <!--搜索框-->
+        <div class="searchBox fbLeft mb25">
+    <div class="searchBox_input">
+        <a class="input-block-level footer_input" href="/search.html#stat_search" data-delegate="go" data-page-tmplid="search"></a>
+    </div>
+    <div class="searchBox_btn">
+        <a class="btn-primary" href="/search.html#stat_search" data-delegate="go" data-page-tmplid="search"><i class="iconButton-1x iconButton-2x iconButton_search"></i></a>
+    </div>
+</div>
+
+        <!--搜索框end-->
+        <!--帮助反馈这一行-->
+        <div class="fbJustify mb25">
+    <div><a href="http://www.iqiyi.com/?data-lazy=fromhtml5bottempc" data-elem="pc" title="pc版"><i class="icon-1x icon-2x icon_pc mr5"></i><span class="vl">PC版</span></a></div>
+    <div><a href="/feedback.html?entry=phoneshouye" data-delegate="go" data-page-tmplid="feedback" title="用户反馈"><i class="icon-1x icon-2x icon_feedback mr5"></i><span class="vl">用户反馈</span></a></div>
+    <div><a href="javascript:void(0)" title="回顶部" data-widget-totop="totop"><i class="icon-1x icon-2x icon_toTop mr5"></i><span class="vl">回顶部</span></a></div>
+</div>
+
+        <!--帮助反馈这一行end-->
+        <!--公司介绍这一行-->
+        <div class="footer_links mb25">
+    <span><a href="http://www.iqiyi.com/common/aboutus.html">公司介绍</a></span>
+    <span><a href="http://www.iqiyi.com/common/news.html">新闻动态</a></span>
+    <span><a href="http://www.iqiyi.com/common/contactus.html">联系方式</a></span>
+    <span><a href="http://www.iqiyi.com/common/employ.html">招聘英才</a></span>
+    <span><a href="http://www.iqiyi.com/common/helpandsuggest.html?entry=yedi">帮助与反馈</a></span>
+    <span><a href="http://www.iqiyi.com/common/20100420/n4813.html">about us</a></span>
+</div>
+
+        <!--公司介绍这一行end-->
+        <!--公司介绍下一行-->
+        <div class="footer_cr">
+    <p>悦享品质 Always Fun，Always Fine</p>
+    <p>爱奇艺 ©right; 2013 iQIYI.COM</p>
+</div>
+
+        <!--公司介绍下一行end-->
+    </footer>
+    <div class="backToTop" data-widget-totop="scroll" style="display: none;">
+    <a href="javascript:void(0)" class="iconButton-1x iconButton-2x iconButton_backToTop"></a>
+</div>
+
+</body>
+</html>
