@@ -1,4 +1,4 @@
-define(function () {
+﻿define(function () {
     return {
         '$escape': function (content) {
 

@@ -9,8 +9,6 @@ var ic = new lib.ic.InfoCenter({
 
 module.exports = {
     init: function(server) {
-        console.log('this');
-        console.log(this);
         server.get('/billboard.html', this._process.bind(this));
         server.get('/getTopData', this._getTopData);
     },
@@ -22,15 +20,11 @@ module.exports = {
         getTop({}, callback);
     },
     _process: function(req, res) {
-        console.log('_process');
-        console.log(this);
-
         var tvid = req.query.tvid;
         var defaultCid = 9; // 娱乐频道
         var defaultDim = 'wee'; // 7天上榜
 
         this._getTopData(function(err, data) {
-            console.log(err, data)
             if (!err) {
                 try {
                     var weeData = data[defaultDim][defaultCid];
