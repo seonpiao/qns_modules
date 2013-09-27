@@ -22,7 +22,7 @@ module.exports = {
                 res.set({
                     'Content-Type': xhr.getResponseHeader('Content-Type')
                 });
-                var str = data.toString().replace(/_180_120.jpg/g, '.jpg');
+                var str = data.toString().replace(/_180_120.jpg/g, '_120_160.jpg');
                 res.send(renderer({
                     data: JSON.parse(str).data
                 }));

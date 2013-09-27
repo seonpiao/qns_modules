@@ -38,9 +38,10 @@
         Q.load('home');
     </script>
     <style type="text/css">
-    .two .indexHeight-118{height:122px;}
+    .two .indexHeight-118{height:122px;padding: 0 5px;}
     .two .indexHeight-118 li{width: 145px;}
     .two .picList_90-118 .picList_pic img {width: 145px;height: 90px;}
+    .two .picList_90-118 li>div {width: 145px;}
     </style>
 </head>
 <body>
@@ -375,7 +376,7 @@
 </div>
 <!-- 资讯 结束 -->
 <!-- 娱乐 开始 -->
-<div class="modList mb15">
+<div class="modList mb15 two">
     <div class="mod_title mod_title-normal mb10">
         <h2><a class="titleInfo" href="/yule/#stat_channel" data-delegate="go" data-page-tmplid="yule">
             <i class="icon-1x icon-2x icon_ent mr5"></i><span class="vl">娱乐</span>
@@ -641,7 +642,7 @@
 </div>
 <!-- 片花 结束 -->
 <!-- 微电影 开始 -->
-<div class="modList mb15">
+<div class="modList mb15 two">
     <div class="mod_title mod_title-normal mb10">
         <h2><a class="titleInfo" href="/weidianying/#stat_channel" data-delegate="go" data-page-tmplid="weidianying">
             <i class="icon-1x icon-2x icon_minimovie mr5"></i><span class="vl">微电影</span>
@@ -779,7 +780,7 @@
 </div>
 <!-- 动漫 结束 -->
 <!-- 综艺 开始 -->
-<div class="modList mb15">
+<div class="modList mb15 two">
     <div class="mod_title mod_title-normal mb10">
         <h2><a class="titleInfo" href="/zongyi/#stat_channel" data-delegate="go" data-page-tmplid="zongyi">
             <i class="icon-1x icon-2x icon_variety mr5"></i><span class="vl">综艺</span>
@@ -825,7 +826,7 @@
 </div>
 <!-- 综艺 结束 -->
 <!-- 搞笑 开始 -->
-<div class="modList mb15">
+<div class="modList mb15 two">
     <div class="mod_title mod_title-normal mb10">
         <h2><a class="titleInfo" href="/fun/#stat_channel" data-delegate="go" data-page-tmplid="fun">
             <i class="icon-1x icon-2x icon_funny mr5"></i><span class="vl">搞笑</span>
@@ -871,7 +872,7 @@
 </div>
 <!-- 搞笑 结束 -->
 <!-- 生活 开始 -->
-<div class="modList mb15">
+<div class="modList mb15 two">
     <div class="mod_title mod_title-normal mb10">
         <h2><a class="titleInfo" href="/life/#stat_channel" data-delegate="go" data-page-tmplid="life">
             <i class="icon-1x icon-2x icon_life mr5"></i><span class="vl">生活</span>
@@ -917,7 +918,7 @@
 </div>
 <!-- 生活 结束 -->
 <!-- 时尚 开始 -->
-<div class="modList mb15">
+<div class="modList mb15 two">
     <div class="mod_title mod_title-normal mb10">
         <h2><a class="titleInfo" href="/shishang/#stat_channel" data-delegate="go" data-page-tmplid="shishang">
             <i class="icon-1x icon-2x icon_fashion mr5"></i><span class="vl">时尚</span>
@@ -963,7 +964,7 @@
 </div>
 <!-- 时尚 结束 -->
 <!-- 音乐 开始 -->
-<div class="modList mb15">
+<div class="modList mb15 two">
     <div class="mod_title mod_title-normal mb10">
         <h2><a class="titleInfo" href="/yinyue/#stat_channel" data-delegate="go" data-page-tmplid="yinyue">
             <i class="icon-1x icon-2x icon_music mr5"></i><span class="vl">音乐</span>
@@ -1009,7 +1010,7 @@
 </div>
 <!-- 音乐 结束 -->
 <!-- 纪录片 开始 -->
-<div class="modList mb15">
+<div class="modList mb15 two">
     <div class="mod_title mod_title-normal mb10">
         <h2><a class="titleInfo" href="/jilupian/#stat_channel" data-delegate="go" data-page-tmplid="jilupian">
             <i class="icon-1x icon-2x icon_docu mr5"></i><span class="vl">纪录片</span>
@@ -1055,7 +1056,7 @@
 </div>
 <!-- 纪录片 结束 -->
 <!-- 体育 开始 -->
-<div class="modList mb15">
+<div class="modList mb15 two">
     <div class="mod_title mod_title-normal mb10">
         <h2><a class="titleInfo" href="/sports/#stat_channel" data-delegate="go" data-page-tmplid="sports">
             <i class="icon-1x icon-2x icon_sports mr5"></i><span class="vl">体育</span>
@@ -1101,7 +1102,7 @@
 </div>
 <!-- 体育 结束 -->
 <!-- 旅游 开始 -->
-<div class="modList mb15">
+<div class="modList mb15 two">
     <div class="mod_title mod_title-normal mb10">
         <h2><a class="titleInfo" href="/lvyou/#stat_channel" data-delegate="go" data-page-tmplid="lvyou">
             <i class="icon-1x icon-2x icon_travel mr5"></i><span class="vl">旅游</span>
@@ -1147,7 +1148,7 @@
 </div>
 <!-- 旅游 结束 -->
 <!-- 教育 开始 -->
-<div class="modList mb15">
+<div class="modList mb15 two">
     <div class="mod_title mod_title-normal mb10">
         <h2><a class="titleInfo" href="/edu/#stat_channel" data-delegate="go" data-page-tmplid="edu">
             <i class="icon-1x icon-2x icon_edu mr5"></i><span class="vl">教育</span>
@@ -1278,6 +1279,13 @@
 <div class="backToTop" data-widget-totop="scroll" style="display:none;">
     <a href="javascript:void(0)" class="iconButton-1x iconButton-2x iconButton_backToTop"></a>
 </div>
+<script type="text/javascript">
+var imgs = document.querySelectorAll('.two .picList_pic img');
+for(var i = 0 ;i < imgs.length; i++){
+    var img = imgs[i];
+    img.src = img.src.replace(/_120_160.jpg/g, '_145_90.jpg');
+}
+</script>
 <!-- Begin 艾瑞 -->
 <script>
     var _iwt_UA = "UA-iqiyi-000001", _iwt_no_flash = 1; //客户项目编号,根据实际生成
